@@ -1,0 +1,7 @@
+%assign data = [1,2,3,4,5]
+%undef data
+%foreach idx = 5
+    %warning data[%<idx>] = %<data[idx]>
+%endforeach
+
+%% error will occur because data is deleted.

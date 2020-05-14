@@ -1,0 +1,3 @@
+%<LibBlockOutputSignal(0, "", lcv, sigIdx)> = %<LibBlockInputSignal(0, "",lcv, sigIdx)>,...
+ * 2
+

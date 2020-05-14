@@ -1,0 +1,10 @@
+%assign idx_i = "origal string"
+%realformat EXPONENTIAL
+%assign data =[[1, "good"]; [3, 4.5F]]
+%foreach idx_i = 2
+    %foreach idx_j = 2
+        %warning The element of data[%<idx_i>][%<idx_j>] is ...
+ %<data[idx_i][idx_j]>
+    %endforeach
+%endforeach
+ %warning The original %<idx_i>

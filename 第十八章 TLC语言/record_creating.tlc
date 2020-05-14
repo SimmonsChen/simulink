@@ -1,0 +1,3 @@
+%createrecord NEW_RECORD { foo 1 ; SUB_RECORD {foo 2} }
+%addtorecord NEW_RECORD str "I love Simulink"
+%warning %<NEW_RECORD>

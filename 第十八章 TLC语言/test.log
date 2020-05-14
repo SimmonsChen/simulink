@@ -1,0 +1,8 @@
+Source: E:\Simulink È∏Â\TLC”Ô—‘\test.tlc
+     1: %realformat "CONCISE"
+     1: %assign pos = FEVAL("regexp", "I love Simulink", "Simu")
+     1: %assign pos = CAST("Number", pos)
+     1: %warning The index of Simu is %<pos>
+     1: %if 0
+     0: %assign at = "gsd"
+     0: %endif

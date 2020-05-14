@@ -1,0 +1,8 @@
+%createrecord record {foo 1 subrec{foo 2}}
+%if ISFIELD(record, "foo")
+%warning record has a parameter foo which value is %<GETFIELD(record, "foo")>.
+%<SETFIELD(record, "foo", 12)>
+%warning parameter foo value is %<GETFIELD(record, "foo")> now.
+%<REMOVEFIELD(record, "foo")>
+%warning parameter foo of record now is existed? Ans: %<ISFIELD(record, "foo")>
+%endif

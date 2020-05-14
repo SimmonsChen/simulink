@@ -1,0 +1,15 @@
+%assign data = [1,2,3,4,5]
+%switch TYPE(data)
+%case "Number"
+%warning Type is Number.
+%break
+%case "String"
+%warning Type is String.
+%break
+%case "Vector"
+%warning Type is Vector.
+%break
+%case "Matrix"
+%warning Type is Matrix.
+%break
+%endswitch

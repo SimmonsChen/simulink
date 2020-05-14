@@ -1,0 +1,7 @@
+%assign data = [1,2,3,4,5]
+%foreach idx = 5
+    %if ISEQUAL(idx,1)
+        %break
+    %endif
+    %warning data[%<idx>] = %<data[idx]>
+%endforeach

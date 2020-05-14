@@ -1,0 +1,10 @@
+%createrecord NEW_RECORD { foo 1 ; SUB_RECORD {foo 2} }
+%createrecord NEW_RECORD2 {str "I love Simulink"}
+%mergerecord NEW_RECORD NEW_RECORD2
+%warning NEW_RECORD = %<NEW_RECORD> NEW_RECORD2 = %<NEW_RECORD2>
+
+%% another demo
+%createrecord NEW_RECORD { foo 1 ; SUB_RECORD {foo 2} }
+%createrecord NEW_RECORD2 {foo 12}
+%mergerecord NEW_RECORD NEW_RECORD2
+%warning NEW_RECORD = %<NEW_RECORD> NEW_RECORD2 = %<NEW_RECORD2>

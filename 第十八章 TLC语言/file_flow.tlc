@@ -1,0 +1,3 @@
+%openfile buffer = "my_flow_control.txt"
+This is the first time flow control is used.
+%closefile buffer

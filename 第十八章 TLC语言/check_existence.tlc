@@ -1,0 +1,10 @@
+%createrecord record {foo 1 subrec{foo 2}}
+%if EXISTS(record.foo)
+%warning record has a parameter which value is %<record.foo>.
+%endif
+
+%% a new demo
+
+%if FILE_EXISTS("text.tlc")
+%warning text.tlc is on the path.
+%endif

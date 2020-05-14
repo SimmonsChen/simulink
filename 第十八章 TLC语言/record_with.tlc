@@ -1,0 +1,5 @@
+%createrecord rec {field1 1 field2 2 field3 3}
+%with rec
+    %warning filed1 = %<field1>
+%endwith
+%warning rec.filed1 = %<rec.field1>

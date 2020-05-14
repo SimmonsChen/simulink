@@ -1,0 +1,16 @@
+%createrecord NEW_RECORD { foo 1 ; SUB_RECORD {foo 2} }
+%copyrecord NEW_RECORD2 NEW_RECORD
+%undef NEW_RECORD
+
+%% a new demo
+%createrecord NEW_RECORD { foo 1 ; SUB_RECORD {foo 2} }
+%with NEW_RECORD
+%undef foo
+%endwith
+%warning NEW_RECORD = %<NEW_RECORD> 
+
+
+%% a new demo
+%createrecord NEW_RECORD { foo 1 ; SUB_RECORD {foo 2} }
+%undef NEW_RECORD.foo
+%% error occurs here.

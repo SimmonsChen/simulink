@@ -1,0 +1,8 @@
+%for idx = 3, 0, str = "yes"
+   %warning OK?
+    %body
+         %warning Answer is %<str> .
+    %endbody
+   %warning Over
+
+%endfor

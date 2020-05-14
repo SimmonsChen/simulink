@@ -1,0 +1,44 @@
+%implements sfun_c_filter "C"
+
+%% Function: blockTypeSetup ==========================================================
+%%
+%% Purpose:
+%%      Add some macro defines .
+%%
+%function BlockTypeSetup(block, system) void
+
+%endfunction
+
+
+%% Function: Start ==========================================================
+%%
+%% Purpose:
+%%   
+%%     these code will appear at model.c initialization function
+%%
+%function Start(block, system) Output
+    /* If need user can add custom initialize code here */
+%endfunction
+
+
+%% Function: Outputs ==========================================================
+%%
+%% Purpose:
+%%   
+%%     these code will appear at model.c step function
+%%
+%function Outputs(block, system) Output
+
+  %assign t_coef = SFcnParamSettings.r_coef
+    %assign rollVars = ["U", "Y","DWork"]
+    %roll sigIdx = RollRegions, lcv = RollThreshold, block, "Roller", rollVars
+        %assign u = LibBlockInputSignal(0, " ", lcv, sigIdx)
+        %assign y = LibBlockOutputSignal(0, " ", lcv, sigIdx)
+        %assign x = LibBlockDWork(dwork, "", lcv, sigIdx)
+            /* Calculate the filter result */
+            %<y> = (%<u> - %<x>) * %<t_coef> + %<x>;
+            %<x> = %<y>;
+    %endroll
+
+%endfunction
+

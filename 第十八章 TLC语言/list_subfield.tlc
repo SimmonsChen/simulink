@@ -1,0 +1,2 @@
+%createrecord record {foo 1 subrec{foo 2}}
+%warning %<FIELDNAMES(record)>

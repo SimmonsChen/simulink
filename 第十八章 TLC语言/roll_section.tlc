@@ -1,0 +1,9 @@
+%% roll normally used in block tlc files to roll the inport/outport/parameter to access each dimension of them.
+/* %<Type> Block: %<Name> */
+%assign rollVars = ["U", "Y"]
+%roll sigIdx = RollRegions, lcv = RollThreshold, block,...
+"Roller", rollVars
+%assign y = LibBlockOutputSignal(0, "", lcv, sigIdx)
+%assign u = LibBlockInputSignal(0, "", lcv, sigIdx)
+%<y> = %<u> * 2;
+%endroll

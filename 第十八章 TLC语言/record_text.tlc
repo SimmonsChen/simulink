@@ -1,0 +1,5 @@
+%createrecord NEW_RECORD { foo 10000000 ; SUB_RECORD {foo 2} }
+
+%%realformat CONCISE
+%realformat EXPONENTIAL
+%warning %<NEW_RECORD.foo>

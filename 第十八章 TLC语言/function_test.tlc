@@ -1,0 +1,12 @@
+
+
+%function LibGetMathConstant(ConstName,ioTypeId) void
+ 
+  %assign constInfo = SLibGetMathConstantInfo(ConstName,ioTypeId)
+  %if !ISEMPTY(constInfo)
+    %return constInfo.Expr
+  %else
+    %return ""
+  %endif
+ 
+%endfunction

@@ -1,0 +1,6 @@
+%assign data =[[1, "good"]; [3, 4.5F]]
+%foreach idx_i = 2
+    %foreach idx_j = 2
+        %warning The element of data[%<idx_i>][%<idx_j>] is Åc %<data[idx_i][idx_j]>
+    %endforeach
+%endforeach

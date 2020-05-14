@@ -1,0 +1,3 @@
+%createrecord NEW_RECORD { foo 1 ; SUB_RECORD {foo 2} }
+%copyrecord NEW_RECORD2 NEW_RECORD
+%warning NEW_RECORD = %<NEW_RECORD> NEW_RECORD2 = %<NEW_RECORD2>

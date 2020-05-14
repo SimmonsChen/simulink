@@ -1,0 +1,3 @@
+%function GoodBad(Message) void
+%warning Good or Bad %<Message>?!
+%endfunction
